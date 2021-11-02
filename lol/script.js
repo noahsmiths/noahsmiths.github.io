@@ -14,9 +14,10 @@ const loadVideo = () => {
                 if (!localStorage.getItem("loadedPreviously")) {
                     localStorage.setItem("loadedPreviously", true);
                     window.location.reload();
+                } else {
+                    document.getElementById("initial-content").style.display = "none";
+                    document.getElementById("vid-container").style.display = "initial";
                 }
-                document.getElementById("initial-content").style.display = "none";
-                document.getElementById("vid-container").style.display = "initial";
             },
         }
     });
