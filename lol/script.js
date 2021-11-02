@@ -1,8 +1,8 @@
 let player;
 
 const loadVideo = () => {
-    if (!localStorage.get("loadedPreviously")) {
-        localStorage.set("loadedPreviously", true);
+    if (!localStorage.getItem("loadedPreviously")) {
+        localStorage.setItem("loadedPreviously", true);
         window.location.reload();
     }
 
