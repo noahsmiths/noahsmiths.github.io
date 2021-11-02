@@ -11,11 +11,11 @@ const loadVideo = () => {
         events: {
             'onReady': (e) => {
                 e.target.playVideo();
+                document.getElementById("initial-content").style.display = "none";
+                document.getElementById("vid-container").style.display = "initial";
             },
         }
     });
-    document.getElementById("initial-content").style.display = "none";
-    document.getElementById("vid-container").style.display = "initial";
 }
 
 document.getElementById("load-button").addEventListener("click", loadVideo);
