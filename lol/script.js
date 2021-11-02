@@ -35,6 +35,8 @@ window.onload = () => {
             events: {
                 'onReady': (e) => {
                     e.target.playVideo();
+                    document.getElementById("initial-content").style.display = "none";
+                    document.getElementById("vid-container").style.display = "initial";
                 },
             }
         });
