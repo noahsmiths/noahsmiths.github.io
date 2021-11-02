@@ -1,6 +1,11 @@
 let player;
 
 const loadVideo = () => {
+    if (!localStorage.get("loadedPreviously")) {
+        localStorage.set("loadedPreviously", true);
+        window.location.reload();
+    }
+
     player = new YT.Player('player', {
         height: screen.availHeight * 0.7,
         width: screen.availWidth * 0.95,
