@@ -1,3 +1,7 @@
 #vid-container {
     display: none;
 }
+
+#container {
+    text-align: center;
+}
