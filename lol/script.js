@@ -2,7 +2,7 @@ let player;
 
 const loadVideo = () => {
     player = new YT.Player('player', {
-        height: screen.availHeight * 0.8,
+        height: screen.availHeight * 0.7,
         width: screen.availWidth * 0.95,
         videoId: 'dQw4w9WgXcQ',
         playerVars: {
