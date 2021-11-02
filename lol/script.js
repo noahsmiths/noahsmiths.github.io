@@ -23,4 +23,22 @@ const loadVideo = () => {
     });
 }
 
+window.onload = () => {
+    if (localStorage.getItem("loadedPreviously")) {
+        player = new YT.Player('player', {
+            height: screen.availHeight * 0.7,
+            width: screen.availWidth * 0.95,
+            videoId: 'dQw4w9WgXcQ',
+            playerVars: {
+                'playsinline': 1
+            },
+            events: {
+                'onReady': (e) => {
+                    e.target.playVideo();
+                },
+            }
+        });
+    }
+}
+
 document.getElementById("load-button").addEventListener("click", loadVideo);
